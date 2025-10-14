@@ -7,7 +7,7 @@
 
 main_color      <- "#004aad"  # blå
 secondary_color <- "#c6302c"  # rød
-accent_color    <- "#038C2E"  # grøn
+accent_color    <- "#E7B34B"  # gul
 text_color      <- "#343434"  # sort
 background_color <- "#ffffff" # hvid
 
