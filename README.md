@@ -5,7 +5,7 @@ ____________________________________
 
 ## Hent koden
 
-Her er en guide til at bruge forskningsenhedens farver i R. 
+Her er en guide til at bruge forskningsenhedens farver i R. I filen "Guide.pdf" er også billeder af nedenstående eksemplers outputs.
 
 Farvekoderne og koden er gemt på GitHub, så for at bruge dem, skal der linkes til kildekoden i starten af din kode som vist her:
 
