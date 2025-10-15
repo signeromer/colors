@@ -1,5 +1,5 @@
 # Farver og logo i R
-## Anæstesiologisk Forskning, Bispebjerg Hospital"
+## Anæstesiologisk Forskning, Bispebjerg Hospital
 _2025-10-15_
 ____________________________________
 
