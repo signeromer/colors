@@ -92,22 +92,29 @@ logo_urls <- list(
   logo_english = "https://raw.githubusercontent.com/signeromer/colors/main/logo_english.png"
 )
 
-
 # Funktion til at tilføje logo
-add_logo <- function(logo = "logo", x = 0.9, y = 0.1, width = 1, height = 1) {
+add_logo <- function(logo = "logo", x = NULL, y = NULL, width = NULL, height = NULL) {
   if (!requireNamespace("png", quietly = TRUE)) stop("png-pakken skal installeres")
   if (!requireNamespace("grid", quietly = TRUE)) stop("grid-pakken skal installeres")
   
   # Find URL fra listen
-  url <- logo_urls[[logo]]
+  url <- logo_urls[[as.character(logo)]]
   if (is.null(url)) stop("Logo ikke fundet. Brug 'logo', 'logo_danish' eller 'logo_english'")
   
-  # Hent og tegn logo
+  # Hent og læs logo
   tmp <- tempfile(fileext = ".png")
   download.file(url, tmp, mode="wb")
   logo_img <- png::readPNG(tmp)
   logo_grob <- grid::rasterGrob(logo_img, interpolate = TRUE)
   
-  grid::grid.draw(grid::editGrob(logo_grob,
-                                 vp = grid::viewport(x=x, y=y, width=width, height=height)))
+  # Opret viewport med default til midt/bund hvis NULL
+  vp <- grid::viewport(
+    x = ifelse(is.null(x), 0.9, x),
+    y = ifelse(is.null(y), 0.1, y),
+    width  = ifelse(is.null(width), 0.1, width),
+    height = ifelse(is.null(height), 0.1, height)
+  )
+  
+  # Tegn logo
+  grid::grid.draw(grid::editGrob(logo_grob, vp = vp))
 }
