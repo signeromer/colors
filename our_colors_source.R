@@ -3,7 +3,7 @@
 # Primære HEX-værdier
 main_color       <- "#004aad"  # blå
 secondary_color  <- "#c6302c"  # rød
-accent_color     <- "#BBE5ED"  # lys blå
+accent_color     <- "#EFD28D"  # gul
 text_color       <- "#343434"  # sort
 background_color <- "#ffffff"  # hvid
 
@@ -12,7 +12,7 @@ background_color <- "#ffffff"  # hvid
 color_info <- c(
   "blue"   = main_color,
   "red"    = secondary_color,
-  "light_blue" = accent_color,
+  "yellow" = accent_color,
   "black"  = text_color,
   "white"  = background_color
 )
@@ -21,7 +21,7 @@ color_info <- c(
 color_labels <- c(
   "blue"   = "Blue (main)",
   "red"    = "Red (secondary)",
-  "light_blue" = "Light blue (accent)",
+  "yellow" = "Yellow (accent)",
   "black"  = "Black (text/lines)",
   "white"  = "White (background)"
 )
