@@ -1,15 +1,7 @@
----
-title: "Farver og logo i R"
-subtitle: "Anæstesiologisk Forskning, Bispebjerg Hospital"
-output:
-  word_document: default
-  pdf_document: default
-date: "2025-10-15"
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# Farver og logo i R
+## Anæstesiologisk Forskning, Bispebjerg Hospital"
+_2025-10-15_
+____________________________________
 
 ## Hent koden
 
