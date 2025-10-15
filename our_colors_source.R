@@ -94,7 +94,7 @@ logo_urls <- list(
 
 
 # Funktion til at tilføje logo
-add_logo <- function(logo = "logo", x = 0.9, y = 0.1, width = 0.1, height = 0.1) {
+add_logo <- function(logo = "logo", x = 0.9, y = 0.1, width = 1) {
   if (!requireNamespace("png", quietly = TRUE)) stop("png-pakken skal installeres")
   if (!requireNamespace("grid", quietly = TRUE)) stop("grid-pakken skal installeres")
   
