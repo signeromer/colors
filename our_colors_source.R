@@ -87,9 +87,9 @@ see_colors <- function() {
 
 # Liste over logoer
 logo_urls <- list(
-  logo         = "https://raw.githubusercontent.com/signeromer/colors/main/logo.png",
-  logo_danish  = "https://raw.githubusercontent.com/signeromer/colors/main/logo_danish.png",
-  logo_english = "https://raw.githubusercontent.com/signeromer/colors/main/logo_english.png"
+  logo         = "https://raw.githubusercontent.com/signeromer/colors/main/logos/logo.png",
+  logo_danish  = "https://raw.githubusercontent.com/signeromer/colors/main/logos/logo_danish.png",
+  logo_english = "https://raw.githubusercontent.com/signeromer/colors/main/logos/logo_english.png"
 )
 
 # Funktion til at tilføje logo
