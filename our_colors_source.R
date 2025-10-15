@@ -84,3 +84,29 @@ see_colors <- function() {
   
   invisible(df)
 }
+
+# Liste over logoer
+logo_urls <- list(
+  logo = "logo.png",
+  logo_danish = "logo_danish.png",
+  logo_english = "logo_english.png"
+)
+
+# Funktion til at tilføje logo
+add_logo <- function(logo = "logo", x = 0.9, y = 0.1, width = 0.1, height = 0.1) {
+  if (!requireNamespace("png", quietly = TRUE)) stop("png-pakken skal installeres")
+  if (!requireNamespace("grid", quietly = TRUE)) stop("grid-pakken skal installeres")
+  
+  # Find URL fra listen
+  url <- logo_urls[[logo]]
+  if (is.null(url)) stop("Logo ikke fundet. Brug 'logo', 'logo_danish' eller 'logo_english'")
+  
+  # Hent og tegn logo
+  tmp <- tempfile(fileext = ".png")
+  download.file(url, tmp, mode="wb")
+  logo_img <- png::readPNG(tmp)
+  logo_grob <- grid::rasterGrob(logo_img, interpolate = TRUE)
+  
+  grid::grid.draw(grid::editGrob(logo_grob,
+                                 vp = grid::viewport(x=x, y=y, width=width, height=height)))
+}
